@@ -15,7 +15,9 @@ RUN useradd -ms /bin/bash myuser
 USER myuser
 
 
-COPY . .
+COPY main.py /app/
+COPY requirements.txt /app/
+
 
 
 CMD ["python", "main.py"]

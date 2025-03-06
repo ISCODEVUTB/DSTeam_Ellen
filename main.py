@@ -3,8 +3,7 @@ import datetime
 import re
 
 usuarios = {
-    "admin": {"password": "admin123", "rol": "admin"},
-    "cliente1": {"password": "cliente123", "rol": "cliente"},
+    
 }
 
 paquetes = []

@@ -1,10 +1,21 @@
-
+# 1) Imagen base
 FROM python:3.9-slim
 
+# 2) Creamos una carpeta de trabajo
 WORKDIR /app
 
 
-COPY main.py /app/main.py
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Comando que se ejecutará al iniciar el contenedor
+# Creamos un usuario "myuser" sin privilegio
+RUN useradd -ms /bin/bash myuser
+
+
+USER myuser
+
+
+COPY . .
+
+
 CMD ["python", "main.py"]

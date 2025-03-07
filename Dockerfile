@@ -11,7 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Creamos un usuario "myuser" sin privilegio
 RUN useradd -ms /bin/bash myuser
 
-
 USER myuser
 
 
